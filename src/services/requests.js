@@ -10,7 +10,7 @@ export const login = (body, clear, navigate, setButton) => {
             localStorage.setItem("token", res.data.token)
             clear()
             goToRestaurantPage(navigate)
-            setButton("Logout")
+            //setButton("Logout")
         })
         .catch((err) => {
             alert(err.response.data)

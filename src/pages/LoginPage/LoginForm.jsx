@@ -16,13 +16,15 @@ const LoginForm = ({setButton}) => {
     return(
         <div>
             <form onSubmit={onSubmitForm}>
-                <input 
+                <input
+                name="email"
                 placeholder="email"
                 required
                 type={"email"}
                 onChange={onChangeInput}
                 />
                 <input 
+                name="password"
                 placeholder="senha"
                 required
                 type={"password"}

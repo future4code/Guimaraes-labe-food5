@@ -10,7 +10,6 @@ const LoginForm = ({setButton}) => {
     const onSubmitForm = (e) => {
         e.preventDefault()
         login(form, clear, navigate, setButton)
-        console.log(form)
     }
 
 

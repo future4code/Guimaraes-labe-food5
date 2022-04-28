@@ -10,19 +10,22 @@ const LoginForm = ({setButton}) => {
     const onSubmitForm = (e) => {
         e.preventDefault()
         login(form, clear, navigate, setButton)
+        console.log(form)
     }
 
 
     return(
         <div>
             <form onSubmit={onSubmitForm}>
-                <input 
+                <input
+                name="email"
                 placeholder="email"
                 required
                 type={"email"}
                 onChange={onChangeInput}
                 />
                 <input 
+                name="password"
                 placeholder="senha"
                 required
                 type={"password"}

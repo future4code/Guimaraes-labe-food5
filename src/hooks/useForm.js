@@ -6,9 +6,11 @@ const useForm = (initialState) => {
     const { value, name } = e.target;
     setForm({ ...form, [name]: value });
   };
+
   const clear = () => {
     setForm(initialState);
   };
+  
   return [form, handleInputChange, clear];
 };
 export default useForm;

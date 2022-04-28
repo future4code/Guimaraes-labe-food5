@@ -7,7 +7,6 @@ import useUnprotectedPage from "../../hooks/useUnprotectedPage";
 
 const LoginPage = ({setButton}) => {
     const navigate = useNavigate()
-    useUnprotectedPage()
 
     return (
         <div>

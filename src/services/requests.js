@@ -1,6 +1,6 @@
 import axios from "axios"
 import { BASE_URL } from "../constants/url"
-import { goToRestaurantPage } from '../routes/coordinator'
+import { goToFeedPage } from '../routes/coordinator'
 
 export const login = (body, clear, navigate, setButton) => {
     
@@ -9,7 +9,7 @@ export const login = (body, clear, navigate, setButton) => {
         .then((res) => {
             localStorage.setItem("token", res.data.token)
             clear()
-            goToRestaurantPage(navigate)
+            goToFeedPage(navigate)
             //setButton("Logout")
         })
         .catch((err) => {

@@ -5,7 +5,7 @@ const App = () => {
   return (
     <div>
       <Router/>
-  </div>
+    </div>
   );
 }
 

@@ -22,7 +22,7 @@ const GlobalState = (props) => {
   //3 - Services:
   const login = (body, clear, navigate, setLoginButtonText) => {
     axios
-      .post(`${BASE_URL}/user/login`, body)
+      .post(`${BASE_URL}/login`, body)
       .then((res) => {
         localStorage.setItem("token", res.data.token);
         clear();
@@ -34,7 +34,7 @@ const GlobalState = (props) => {
   };
   const signUp = (body, clear, navigate, setLoginButtonText) => {
     axios
-      .post(`${BASE_URL}/user/signup`, body)
+      .post(`${BASE_URL}/signup`, body)
       .then((res) => {
         localStorage.setItem("token", res.data.token);
         clear();

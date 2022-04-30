@@ -6,6 +6,7 @@ import profile from '../../images/profile.svg'
 import { goToCartPage, goToFeedPage, goToProfilePage } from "../../routes/coordinator"
 import { useNavigate } from "react-router-dom"
 
+
 const Navigation = () => {
     const navigate = useNavigate()
     const [currentIcon, setCurrentIcon] = useState("home")

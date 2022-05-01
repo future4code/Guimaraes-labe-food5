@@ -5,6 +5,7 @@ const useForm = (initialState) => {
   const handleInputChange = (e) => {
     const { value, name } = e.target;
     setForm({ ...form, [name]: value });
+    console.log(form)
   };
 
   const clear = () => {

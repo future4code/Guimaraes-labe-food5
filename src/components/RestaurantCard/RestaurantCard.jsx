@@ -1,15 +1,15 @@
 import React from "react";
 import { Container, Info } from "./styles";
 
-const RestaurantCard = () => {
+const RestaurantCard = (props) => {
     return (
         <Container>
-            <img src="https://cdn.zeplin.io/5dcc566ddc1332bf7fb4f450/assets/7310808B-889E-450E-B76E-883261DC695C.png" alt="Restaurante" />
+            <img src={props.logo} alt={props.name} />
             <Info>
-                <span id="name">Vinil Butantã</span>
+                <span id="name">{props.name}</span>
                 <div>
-                    <span>50 - 60 min</span>
-                    <span>Frete R$ 6,00</span>
+                    <span>{props.time - 10} - {props.time} min</span>
+                    <span>Frete R$ {props.shipping.toFixed(2)}</span>
                 </div>
             </Info>
         </Container>

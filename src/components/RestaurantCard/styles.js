@@ -4,6 +4,7 @@ export const Container = styled.div`
     border: 1px solid var(--black-25);
     border-radius: 10px;
     margin: 0 0 10px;
+    cursor: pointer;
 
     img {
         height: 120px;
@@ -22,8 +23,8 @@ export const Info = styled.div`
     }
 
     span {
-        color: var(--black-25);
-        font-weight: 500;
+        color: #979797;
+        font-weight: 400;
     }
 
     div {

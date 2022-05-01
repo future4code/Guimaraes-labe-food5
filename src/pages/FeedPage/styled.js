@@ -15,14 +15,19 @@ export const Tags = styled.div`
         width: 90px;
         text-align: center;
         margin-right: 18px;
+        cursor: pointer;
     }
 `
 
 export const Span = styled.div`
     padding: 20px 0px;
-    color: ${props => props.active ? "var(--green)" : "black"}
+    color: ${props => props.active ? "var(--green)" : "black"};
 `
 
 export const RestaurantDisplay = styled.div`
-
+    @media (min-width: 500px) {
+        display: grid;
+        grid-gap: 15px;
+        grid-template-columns: repeat(auto-fill,minmax(250px, 1fr));
+    }
 `

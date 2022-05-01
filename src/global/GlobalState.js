@@ -3,7 +3,7 @@ import GlobalStateContext from "./GlobalStateContext";
 import axios from "axios";
 import { BASE_URL } from "../constants/url";
 import { useNavigate } from "react-router-dom";
-import { goToSearchRestaurantPage } from "../routes/coordinator";
+import { goToFeedPage } from "../routes/coordinator";
 const GlobalState = (props) => {
   //Organizando o código
 
@@ -26,7 +26,7 @@ const GlobalState = (props) => {
       .then((res) => {
         localStorage.setItem("token", res.data.token);
         clear();
-        goToSearchRestaurantPage(navigate);
+        goToFeedPage(navigate);
         setLoginButtonText("Logout");
         console.log(res);
       })
@@ -38,7 +38,7 @@ const GlobalState = (props) => {
       .then((res) => {
         localStorage.setItem("token", res.data.token);
         clear();
-        goToSearchRestaurantPage(navigate);
+        goToFeedPage(navigate);
         setLoginButtonText("Logout");
         console.log(res);
       })

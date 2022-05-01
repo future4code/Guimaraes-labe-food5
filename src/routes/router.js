@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import CartPage from "../pages/CartPage/CartPage";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import HomePage from "../pages/HomePage/HomePage";
@@ -16,6 +16,15 @@ import Navigation from "../components/Navigation/Navigation";
 const Container = styled.div``;
 
 const Router = () => {
+  const location = useLocation()
+
+  const checkPage = () => {
+    if (location.pathname === '/') return false
+    if (location.pathname === '/login') return false
+    if (location.pathname === '/cadastro') return false
+    return true
+  }
+
   return (
     <Container>
       <Routes>
@@ -34,7 +43,10 @@ const Router = () => {
         <Route exact path="/restaurantes" element={<SearchRestaurantPage />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
-      <Navigation />
+      {checkPage() ? (
+        <Navigation />
+      ) : null}
+      
     </Container>
   );
 };

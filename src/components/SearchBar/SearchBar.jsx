@@ -1,12 +1,14 @@
 import React from "react"
 import { Container, Input } from "./styled"
-import search from '../../images/search.svg'
+import searchIcon from '../../images/search.svg'
 
-const SearchBar = () => {
+const SearchBar = (props) => {
     return (
         <Container>
-            <img src={search} alt="Pesquisar" />
+            <img src={searchIcon} alt="Pesquisar" />
             <Input
+                value={props.search}
+                onChange={(e) => props.setSearch(e.target.value)}
                 placeholder="Restaurante"
             />
         </Container>

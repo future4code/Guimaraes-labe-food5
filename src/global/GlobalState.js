@@ -1,14 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import GlobalStateContext from "./GlobalStateContext";
 import axios from "axios";
 import { BASE_URL } from "../constants/url";
-import { useNavigate } from "react-router-dom";
 import { goToFeedPage } from "../routes/coordinator";
 const GlobalState = (props) => {
   //Organizando o código
 
   //1 - Hooks gerais:
-  const navigate = useNavigate();
 
   //2 - Todos os estados gerais da aplicação:
   const token = localStorage.getItem("token");

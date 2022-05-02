@@ -3,6 +3,8 @@ import useProtectedPage from "../../hooks/useProtectedPage";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { BASE_URL } from "../../constants/url";
+import { Name, Title, Email, Span, Rectangle, Container, Bar } from "./styled";
+import CreateIcon from "@mui/icons-material/Create";
 
 const ProfilePage = () => {
   useProtectedPage();
@@ -38,18 +40,29 @@ const ProfilePage = () => {
   };
 
   return (
-    <div>
-      <h3>Meu Perfil</h3>
-      <p>{profileList.name}</p>
-      <p>{profileList.email}</p>
-      <p>{profileList.cpf}</p>
-      <button>Editar Perfil</button>
+    <Container>
+      <Bar>
+        <Title>Meu Perfil</Title>
+      </Bar>
 
       <div>
-        <p>Endereço cadastrado: {profileList.address}</p>
-        <button>Editar Endereço</button>
+        <Name>{profileList.name}</Name>
+        <Email>{profileList.email}</Email>
+        <Span>{profileList.cpf}</Span>
+        <button>
+          <CreateIcon></CreateIcon>
+        </button>
       </div>
-    </div>
+
+      <Rectangle>
+        <p>Endereço cadastrado: {profileList.address}</p>
+        <button>
+          <CreateIcon></CreateIcon>
+        </button>
+      </Rectangle>
+
+      <span>Histórico de Pedidos</span>
+    </Container>
   );
 };
 export default ProfilePage;

@@ -1,16 +1,13 @@
-import { useLayoutEffect } from "react";
+import { useLayoutEffect, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { goToSearchRestaurantPage } from "../routes/coordinator";
-
 const useUnprotectedPage = () => {
   const navigate = useNavigate();
-
-  useLayoutEffect(() => {
-    const token = localStorage.getItem("token");
-    if (token) {
-      goToSearchRestaurantPage(navigate);
+  useEffect(() => {
+    const token = localStorage.getItem('token')
+    if (token !== null) {
+      navigate('/home')
     }
-  }, [navigate]);
+  }, [])
 };
-
 export default useUnprotectedPage;

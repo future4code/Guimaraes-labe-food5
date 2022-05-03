@@ -11,6 +11,8 @@ import RestaurantPage from "../pages/RestaurantPage/RestaurantPage";
 import SearchRestaurantPage from "../pages/SearchRestaurantPage/SearchRestaurantPage";
 import SignUpPage from "../pages/SingUpPage/SignUpPage";
 import FeedPage from "../pages/FeedPage/FeedPage";
+import EditProfile from "../pages/ProfilePage/EditProfile";
+import EditAddres from "../pages/ProfilePage/EditAddres";
 import Navigation from "../components/Navigation/Navigation";
 
 const Container = styled.div``;
@@ -32,6 +34,8 @@ const Router = () => {
         <Route exact path="/login" element={<LoginPage />} />
         <Route exact path="/cadastro" element={<SignUpPage />} />
         <Route exact path="/perfil/:id" element={<ProfilePage />} />
+        <Route exact path="/editProfile" element={<EditProfile />}/>
+        <Route exact path="/editAddress" element={<EditAddres />}/>
         <Route exact path="/home" element={<FeedPage />} />
         <Route exact path="/carrinho" element={<CartPage />} />
         <Route exact path="/pedido-em-andamento" element={<OnGoingPage />} />

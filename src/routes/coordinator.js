@@ -37,3 +37,11 @@ export const goToSearchRestaurantPage = (navigate) => {
 export const goToFeedPage = (navigate) => {
   navigate(`/home`);
 }
+
+export const goToEditProfile = (navigate) =>{
+  navigate(`/editProfile`)
+}
+
+export const goToEditAddress = (navigate) =>{
+  navigate(`/editAddress`)
+}

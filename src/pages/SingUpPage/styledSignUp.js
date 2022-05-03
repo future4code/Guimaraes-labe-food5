@@ -4,33 +4,27 @@ export const ScreenContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100vw;
-  margin-top: 10vh;
+  align-content: center;
+  @media screen and (max-width: 375px) {
+      margin: 10vh;
+  }
 `;
 
 export const InputsContainer = styled.div`
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   width: 80vw;
   max-width: 450px;
-  align-items: center;
-  margin-bottom: 20px;
+  text-align: center;
 `;
 
 export const LoginFormContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 80vw;
+
   max-width: 450px;
   align-items: center;
-  margin-bottom: 20px;
 `;
 export const SignUpFormContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 80vw;
   max-width: 450px;
-  align-items: center;
   margin-bottom: 20px;
 `;
 

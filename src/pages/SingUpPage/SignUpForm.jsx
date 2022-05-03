@@ -5,6 +5,9 @@ import { useNavigate } from "react-router-dom";
 import { InputsContainer, SignUpFormContainer } from "./styledSignUp";
 import { TextField } from "@mui/material";
 import { Button } from "@mui/material";
+import logo from "../../assets/logo-future-eats-invert.png"
+import { LogoImage } from "../LoginPage/styledLogin";
+
 
 const SignUpForm = () => {
   const navigate = useNavigate();
@@ -28,6 +31,8 @@ const SignUpForm = () => {
     <form onSubmit={onSubmitForm}>
       <SignUpFormContainer>
         <InputsContainer>
+      <LogoImage src={logo} />
+      <p>Cadastro</p>
           <TextField
             name={"name"}
             value={form.name}
@@ -50,6 +55,17 @@ const SignUpForm = () => {
             margin={"normal"}
             required
             type={"email"}
+          />
+          <TextField
+            type={"text"}
+            name={"cpf"}
+            value={form.cpf}
+            onChange={onChangeInput}
+            label={"CPF:"}
+            variant={"outlined"}
+            margin={"normal"}
+            fullWidth
+            required
           />
           <TextField
             name={"password"}

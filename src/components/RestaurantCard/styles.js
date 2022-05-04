@@ -7,7 +7,7 @@ export const Container = styled.div`
     cursor: pointer;
 
     img {
-        height: 120px;
+        height: 130px;
         width: 100%;
         object-fit: cover;
         border-radius: 8px 8px 0px 0px;

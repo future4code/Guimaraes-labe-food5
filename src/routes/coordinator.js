@@ -39,9 +39,9 @@ export const goToFeedPage = (navigate) => {
 }
 
 export const goToEditProfile = (navigate) =>{
-  navigate(`/editProfile`)
+  navigate(`/editar-perfil`)
 }
 
 export const goToEditAddress = (navigate) =>{
-  navigate(`/editAddress`)
+  navigate(`/editar-endereco`)
 }

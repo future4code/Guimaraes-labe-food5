@@ -5,7 +5,7 @@ import axios from "axios";
 import { BASE_URL } from "../../constants/url";
 import { Name, Title, Email, Span, Rectangle, Container, Bar } from "./styled";
 import CreateIcon from "@mui/icons-material/Create";
-import { goToEditProfile } from "../../routes/coordinator";
+import { goToEditProfile, goToEditAddress } from "../../routes/coordinator";
 
 const ProfilePage = () => {
   useProtectedPage();
@@ -58,7 +58,7 @@ const ProfilePage = () => {
       <Rectangle>
         <p>Endereço cadastrado: {profileList.address}</p>
         <button>
-          <CreateIcon></CreateIcon>
+          <CreateIcon onClick={() => goToEditAddress(navigate)}></CreateIcon>
         </button>
       </Rectangle>
 

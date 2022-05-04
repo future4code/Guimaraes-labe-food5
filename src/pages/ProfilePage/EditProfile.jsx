@@ -3,13 +3,31 @@ import React from "react";
 import useForm from "../../hooks/useForm";
 import { Button } from "@mui/material";
 import { SignUpButtonContainer } from "../LoginPage/styledLogin";
+import axios from "axios";
+import { BASE_URL } from "../../constants/url";
 
 const EditProfile = () => {
   const [form, onChange] = useForm({ name: "", email: "", cpf: "" });
 
   const handleSubmission = (event) => {
+    console.log("deu certo")
     event.preventDefault();
+    axios
+      .put(`${BASE_URL}/profile`, form, {
+        headers: {
+          auth: localStorage.getItem ("token")
+        },
+      })
+      .then((res) => {
+        console.log(res.data);
+        
+      })
+      .catch((err) => {
+        alert(err.response.data);
+      });
   };
+  
+
 
   return (
     <div>

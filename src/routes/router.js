@@ -14,6 +14,7 @@ import FeedPage from "../pages/FeedPage/FeedPage";
 import EditProfile from "../pages/ProfilePage/EditProfile";
 import EditAddres from "../pages/ProfilePage/EditAddres";
 import Navigation from "../components/Navigation/Navigation";
+import Adress from "../pages/SingUpPage/Adress";
 
 const Container = styled.div``;
 
@@ -33,9 +34,10 @@ const Router = () => {
         <Route index path="/" element={<HomePage />} />
         <Route exact path="/login" element={<LoginPage />} />
         <Route exact path="/cadastro" element={<SignUpPage />} />
+        <Route exact path="/cadastro-endereco" element={<Adress />} />
         <Route exact path="/perfil/:id" element={<ProfilePage />} />
-        <Route exact path="/editProfile" element={<EditProfile />}/>
-        <Route exact path="/editAddress" element={<EditAddres />}/>
+        <Route exact path="/editar-perfil" element={<EditProfile />}/>
+        <Route exact path="/editar-endereco" element={<EditAddres />}/>
         <Route exact path="/home" element={<FeedPage />} />
         <Route exact path="/carrinho" element={<CartPage />} />
         <Route exact path="/pedido-em-andamento" element={<OnGoingPage />} />

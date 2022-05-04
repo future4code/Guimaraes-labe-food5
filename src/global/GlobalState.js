@@ -14,7 +14,7 @@ const GlobalState = (props) => {
   const [cart, setCart] = useState({});
   const [profile, setProfile] = useState([]);
   const [restaurantDetail, setRestaurantDetail] = useState({});
-  const [restaurant, setRestaurant] = useState([{}]);
+  const [restaurant, setRestaurant] = useState([]);
   const [activeOrder, setActiveOrder] = useState({});
   const [temporaryToken, setTemporaryToken] = useState("");
 

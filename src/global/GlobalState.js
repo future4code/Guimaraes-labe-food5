@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import GlobalStateContext from "./GlobalStateContext";
 import axios from "axios";
 import { BASE_URL } from "../constants/url";
@@ -77,7 +77,7 @@ const GlobalState = (props) => {
         },
       })
       .then((res) => {
-        setRestaurants(res.data.restaurants);
+        setRestaurant(res.data.restaurants);
       })
       .catch((err) => {
         alert(err.response.data);

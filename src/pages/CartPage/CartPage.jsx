@@ -1,4 +1,4 @@
-import React, { useCOntext, useLayoutEffect, useState } from "react";
+import React, { useContext, useLayoutEffect, useState } from "react";
 import GlobalStateContext from "../../global/GlobalStateContext";
 import useProtectedPage from "../../hooks/useProtectedPage";
 import axios from "axios";
@@ -8,7 +8,7 @@ import { BASE_URL } from "../../constants/url";
 const CartPage = (props) => {
   useProtectedPage();
 
-  const navigate = useNavigate();
+  /*   const navigate = useNavigate();
 
   const [payment, setPayment] = useState("");
   const [shipping, setShipping] = useState(0);
@@ -30,12 +30,12 @@ const CartPage = (props) => {
   };
   const getShipping = (price) => {
     setShipping(price);
-    setTotal(shipping + totalProd);
-  };
+     setTotal(shipping + totalProd);
+  }; */
 
-  for (let i = 0; i < cart.length; i++) {
+  /* for (let i = 0; i < cart.length; i++) {
     totalProd = cart[i].product.price * parseInt(cart[i].quantity) + totalProd;
-  }
+  } */
   /* const toBuyFoods = () => {
     //CONTINUAR DAQUI
     const id = cart[0].restId;

@@ -27,7 +27,7 @@ export const goToOnGoingPage = (navigate) => {
 };
 
 export const goToRestaurantPage = (navigate, restauranteId) => {
-  navigate(`/restaurantes/${restauranteId}`);
+  navigate(`/restaurante/${restauranteId}`);
 };
 
 export const goToSearchRestaurantPage = (navigate) => {

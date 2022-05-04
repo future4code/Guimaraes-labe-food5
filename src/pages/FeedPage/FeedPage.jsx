@@ -77,6 +77,7 @@ const FeedPage = () => {
             name={item.name}
             time={item.deliveryTime}
             shipping={item.shipping}
+            id={item.id}
           />
         ))}
         </RestaurantDisplay>

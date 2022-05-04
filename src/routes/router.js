@@ -41,7 +41,7 @@ const Router = () => {
         <Route exact path="/pedido-em-andamento" element={<OnGoingPage />} />
         <Route
           exact
-          path="/restaurantes/:restauranteId"
+          path="/restaurante/:restauranteId"
           element={<RestaurantPage />}
         />
         <Route exact path="/restaurantes" element={<SearchRestaurantPage />} />

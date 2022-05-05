@@ -5,8 +5,10 @@ import { Button } from "@mui/material";
 import { SignUpButtonContainer } from "../LoginPage/styledLogin";
 import axios from "axios";
 import { BASE_URL } from "../../constants/url";
+import useProtectedPage from "../../hooks/useProtectedPage";
 
 const EditProfile = () => {
+  useProtectedPage()
   const [form, onChange] = useForm({ name: "", email: "", cpf: "" });
 
   const handleSubmission = (event) => {

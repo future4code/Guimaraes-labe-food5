@@ -4,9 +4,13 @@ import { Button, TextField } from "@mui/material";
 import { SignUpButtonContainer } from "../LoginPage/styledLogin";
 import axios from "axios";
 import { BASE_URL } from "../../constants/url";
+import useProtectedPage from "../../hooks/useProtectedPage";
+
 
 
 const EditAddres = () =>{
+  useProtectedPage()
+
     const [form, onChange, clear] = useForm({ street: "", number: "", neighbourhood: "", city: "", state: "", complement: ""});
 
     const handleSubmission = (event) => {  

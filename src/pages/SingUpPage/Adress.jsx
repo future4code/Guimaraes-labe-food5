@@ -4,13 +4,8 @@ import { Button, TextField } from "@mui/material";
 import { SignUpButtonContainer } from "../LoginPage/styledLogin";
 import axios from "axios";
 import { BASE_URL } from "../../constants/url";
-import useProtectedPage from "../../hooks/useProtectedPage";
 
-
-
-const EditAddres = () =>{
-  useProtectedPage()
-
+const Adress = () =>{
     const [form, onChange, clear] = useForm({ street: "", number: "", neighbourhood: "", city: "", state: "", complement: ""});
 
     const handleSubmission = (event) => {  
@@ -31,7 +26,7 @@ const EditAddres = () =>{
     }
     return(
         <div>
-            <p>Endereço</p>
+            <p>Meu Endereço</p>
             <form onSubmit={handleSubmission}>
             <TextField
             value={form.street}
@@ -98,7 +93,7 @@ const EditAddres = () =>{
           fullWidth
           variant={"contained"}
           color={"primary"}>
-            SALVAR
+            Criar
           </Button>
         </SignUpButtonContainer>
 
@@ -106,5 +101,4 @@ const EditAddres = () =>{
         </div>
     )
 }
-
-export default EditAddres;
+export default Adress

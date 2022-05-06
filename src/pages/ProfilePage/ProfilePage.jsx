@@ -3,9 +3,10 @@ import useProtectedPage from "../../hooks/useProtectedPage";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { BASE_URL } from "../../constants/url";
-import { Name, Title, Email, Span, Rectangle, Container, Bar } from "./styled";
+import { Name, Email, Span, Rectangle } from "./styled";
 import CreateIcon from "@mui/icons-material/Create";
 import { goToEditProfile, goToEditAddress } from "../../routes/coordinator";
+import Container from "../../components/MainContainer/styled";
 
 const ProfilePage = () => {
   useProtectedPage();
@@ -42,21 +43,22 @@ const ProfilePage = () => {
 
   return (
     <Container>
-      <Bar>
-        <Title>Meu Perfil</Title>
-      </Bar>
-
-      <div>
-        <Name>{profileList.name}</Name>
-        <Email>{profileList.email}</Email>
-        <Span>{profileList.cpf}</Span>
+      <Rectangle>
+        <div>
+          <p>{profileList.name}</p>
+          <p>{profileList.email}</p>
+          <p>{profileList.cpf}</p>
+        </div>
         <button>
           <CreateIcon onClick={() => goToEditProfile(navigate)}></CreateIcon>
         </button>
-      </div>
+      </Rectangle>
 
-      <Rectangle>
-        <p>Endereço cadastrado: {profileList.address}</p>
+      <Rectangle gray>
+        <div>
+          <span>Endereço cadastrado:</span>
+          <p>{profileList.address}</p>
+        </div>
         <button>
           <CreateIcon onClick={() => goToEditAddress(navigate)}></CreateIcon>
         </button>

@@ -1,52 +1,35 @@
-import React, { useContext } from "react";
-import GlobalStateContext from "../../global/GlobalStateContext";
-import { useNavigate } from "react-router-dom";
-import {
-  goToLoginPage,
-  goToSearchRestaurantPage,
-} from "../../routes/coordinator";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-import { StyledToolbar } from "./styledHeader";
+import React from "react";
+import { Container } from "./styled";
+import back from '../../images/return.svg'
+import { goBack } from "../../routes/coordinator";
+import { useLocation, useNavigate } from "react-router-dom";
 
-const Header = () => {
-  const { states, setters } = useContext(GlobalStateContext);
+const Header = (props) => {
+  const navigate = useNavigate()
+  const location = useLocation()
 
-  const { rightButtonText } = states;
-  const { setRightButtonText } = setters;
+  const headerTitle = () => {
+    if (location.pathname === '/cadastro') return ''
+    if (location.pathname === '/home') return 'FutureEats'
+    if (location.pathname === '/carrinho') return 'Meu carrinho'
+    if (location.pathname === '/perfil') return 'Meu perfil'
+    if (location.pathname === '/editar-perfil') return 'Editar'
+    if (location.pathname === '/editar-endereco') return 'Endereço'
+    return 'Restaurante'
+  }
 
-  const navigate = useNavigate();
-
-  const token = localStorage.getItem("token");
-  const logout = () => {
-    localStorage.removeItem("token");
-  };
-  const rightButtonAction = () => {
-    if (token) {
-      logout();
-      setRightButtonText("Login");
-      goToLoginPage(navigate);
-    } else {
-      goToLoginPage(navigate);
-    }
-  };
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
-        <StyledToolbar>
-          <Button
-            color="inherit"
-            onClick={() => goToSearchRestaurantPage(navigate)}
-          >
-            Future Eats
-          </Button>
-          <Button color="inherit" onClick={() => rightButtonAction()}>
-            {rightButtonText}
-          </Button>
-        </StyledToolbar>
-      </AppBar>
-    </Box>
-  );
-};
-export default Header;
+    <Container>
+      <div>
+        {location.pathname !== '/home' ? (
+          <picture onClick={() => goBack(navigate)}>
+            <img src={back} alt="Voltar"/>
+          </picture>
+        ) : null}
+        <h3>{headerTitle()}</h3>
+      </div>
+    </Container>
+  )
+}
+
+export default Header

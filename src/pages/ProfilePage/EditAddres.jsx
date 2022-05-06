@@ -5,6 +5,7 @@ import { SignUpButtonContainer } from "../LoginPage/styledLogin";
 import axios from "axios";
 import { BASE_URL } from "../../constants/url";
 import useProtectedPage from "../../hooks/useProtectedPage";
+import Container from "../../components/MainContainer/styled";
 
 
 
@@ -30,65 +31,65 @@ const EditAddres = () =>{
       });
     }
     return(
-        <div>
-            <p>Endereço</p>
-            <form onSubmit={handleSubmission}>
-            <TextField
-            value={form.street}
-            name="street"
-            onChange={onChange}
-            label="Logadouro"
-            variant="outlined"
-            className="Input_locus"
-            required
+      <Container>
+          <p>Endereço</p>
+          <form onSubmit={handleSubmission}>
+          <TextField
+          value={form.street}
+          name="street"
+          onChange={onChange}
+          label="Logadouro"
+          variant="outlined"
+          className="Input_locus"
+          required
         />
         <TextField
-            value={form.number}
-            name="number"
-            onChange={onChange}
-            label="Número"
-            variant="outlined"
-            className="Input_locus"
-            pattern="[.\s\w]{2,}"
-            required
-        />
-        
-        <TextField
-            value={form.complement}
-            name="complement"
-            onChange={onChange}
-            label="Complemento"
-            variant="outlined"
-            className="Input_locus "
-            required
+          value={form.number}
+          name="number"
+          onChange={onChange}
+          label="Número"
+          variant="outlined"
+          className="Input_locus"
+          pattern="[.\s\w]{2,}"
+          required
         />
         
         <TextField
-            value={form.neighbourhood}
-            name="neighbourhood"
-            onChange={onChange}
-            label="Bairro"
-            variant="outlined"
-            className="Input_locus"
-            required
+          value={form.complement}
+          name="complement"
+          onChange={onChange}
+          label="Complemento"
+          variant="outlined"
+          className="Input_locus "
+          required
+        />
+        
+        <TextField
+          value={form.neighbourhood}
+          name="neighbourhood"
+          onChange={onChange}
+          label="Bairro"
+          variant="outlined"
+          className="Input_locus"
+          required
         />
         <TextField
-            value={form.city}
-            name="city"
-            onChange={onChange}
-            label="Cidade"
-            variant="outlined"
-            className="Input_locus"
-            required
+          value={form.city}
+          name="city"
+          onChange={onChange}
+          label="Cidade"
+          variant="outlined"
+          className="Input_locus"
+          required
         />
         <TextField
-            value={form.state}
-            name="state"
-            onChange={onChange}
-            label="Estado"
-            variant="outlined"
-            className="Input_locus"
-            required
+          value={form.state}
+          name="state"
+          onChange={onChange}
+          label="Estado"
+          variant="outlined"
+          className="Input_locus"
+          required
         />
        
         
@@ -103,7 +104,7 @@ const EditAddres = () =>{
         </SignUpButtonContainer>
 
         </form>
-        </div>
+      </Container>
     )
 }
 

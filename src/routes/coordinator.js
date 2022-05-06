@@ -18,8 +18,8 @@ export const goToCartPage = (navigate) => {
   navigate(`/carrinho`);
 };
 
-export const goToProfilePage = (navigate, id) => {
-  navigate(`/perfil/${id}`);
+export const goToProfilePage = (navigate) => {
+  navigate(`/perfil`);
 };
 
 export const goToOnGoingPage = (navigate) => {

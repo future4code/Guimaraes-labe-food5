@@ -6,6 +6,7 @@ import { SignUpButtonContainer } from "../LoginPage/styledLogin";
 import axios from "axios";
 import { BASE_URL } from "../../constants/url";
 import useProtectedPage from "../../hooks/useProtectedPage";
+import Container from "../../components/MainContainer/styled";
 
 const EditProfile = () => {
   useProtectedPage()
@@ -32,7 +33,7 @@ const EditProfile = () => {
 
 
   return (
-    <div>
+    <Container>
       <form onSubmit={handleSubmission}>
         <TextField
           name="name"
@@ -70,7 +71,7 @@ const EditProfile = () => {
           </Button>
         </SignUpButtonContainer>
       </form>
-    </div>
+    </Container>
   );
 };
 

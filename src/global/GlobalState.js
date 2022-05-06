@@ -11,7 +11,7 @@ const GlobalState = (props) => {
   const [loginButtonText, setLoginButtonText] = useState(
     token ? "Logout" : "Login"
   );
-  const [cart, setCart] = useState({});
+  const [cart, setCart] = useState([]);
   const [profile, setProfile] = useState([]);
   const [restaurantDetail, setRestaurantDetail] = useState({});
   const [restaurant, setRestaurant] = useState([]);

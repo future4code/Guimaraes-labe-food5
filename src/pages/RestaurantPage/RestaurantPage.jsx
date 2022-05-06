@@ -83,6 +83,7 @@ const RestaurantPage = () => {
                   name={item.name}
                   price={item.price}
                   description={item.description}
+                  item={item}
                 />
               ))}
             </DisplayProducts>
@@ -101,6 +102,7 @@ const RestaurantPage = () => {
                     name={item.name}
                     price={item.price}
                     description={item.description}
+                    item={item}
                   />
                 ))}
               </DisplayProducts>
@@ -119,6 +121,7 @@ const RestaurantPage = () => {
                   name={item.name}
                   price={item.price}
                   description={item.description}
+                  item={item}
                 />
               ))}
             </DisplayProducts>

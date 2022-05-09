@@ -1,65 +1,52 @@
-import React, { useContext, useLayoutEffect, useState } from "react";
+import React, { useContext } from "react";
 import GlobalStateContext from "../../global/GlobalStateContext";
+import { useNavigate } from "react-router-dom";
 import useProtectedPage from "../../hooks/useProtectedPage";
-import axios from "axios";
-import useNavigate from "react-router-dom";
-import { BASE_URL } from "../../constants/url";
-
+import { goToFeedPage } from "../../routes/coordinator";
+import CartItem from "../../components/Cart/CartItem";
+import { ScreenContainer } from "./styledCartPage";
 const CartPage = (props) => {
   useProtectedPage();
+  const navigate = useNavigate();
+  const { states, setters, requests, services } =
+    useContext(GlobalStateContext);
+  const { cart } = states;
+  const { setCart } = setters;
 
-  /*   const navigate = useNavigate();
-
-  const [payment, setPayment] = useState("");
-  const [shipping, setShipping] = useState(0);
-  const [total, setTotal] = useState(0);
-  const { states, setters, requests } = useContext(GlobalStateContext);
-  const { cart, activeOrder } = states;
-  const { setCart, setActiveOrder } = setters;
-  const { addToCart, removeFromCart, getActiveOrder, getProfile } = requests;
-
-  const getLocalStorage = () => {
-    //Carrinho recebe os dados dos produtos pelo local storage:
-    if (localStorage.getItem("cart") && localStorage.getItem("cart").length) {
-      setCart(JSON.parse(localStorage.getItem("cart")));
+  const removeItemFromCart = (itemToRemove) => {
+    const index = cart.findIndex((i) => i.id === itemToRemove.id);
+    const newCart = [...cart];
+    if (newCart[index].amount === 1) {
+      //só tem um item nesse produto:
+      newCart.splice(index, 1);
+    } else {
+      //tem mais de um item deste produto
+      newCart[index].amount -= 1;
     }
+    setCart(newCart);
   };
 
-  const handlePayment = (e) => {
-    setPayment(e.target.value);
-  };
-  const getShipping = (price) => {
-    setShipping(price);
-     setTotal(shipping + totalProd);
-  }; */
+  const renderedCart = cart.map((prod) => {
+    return (
+      <CartItem
+        key={prod.id}
+        product={prod}
+        removeItemFromCart={removeItemFromCart}
+      />
+    );
+  });
+  let priceToPay = 0;
+  cart.forEach((prod) => {
+    priceToPay += Number(prod.price) * prod.amount;
+  });
 
-  /* for (let i = 0; i < cart.length; i++) {
-    totalProd = cart[i].product.price * parseInt(cart[i].quantity) + totalProd;
-  } */
-  /* const toBuyFoods = () => {
-    //CONTINUAR DAQUI
-    const id = cart[0].restId;
-    let body = {};
-    const result =
-      cart.length > 0 &&
-      cart.map((cart) => ({ id: cart.product.id, quantity: cart.quantity }));
-    body.products = result;
-    body.paymentMethod = payment;
-
-    const header = {
-      headers: {
-        auth: localStorage.getItem("token"),
-      },
-    };
-    axios
-      .post(`${BASE_URL}/restaurants/${id}/order`, body, header)
-      .get((res) => {
-        localStorage.removeItem("cart");
-        getLocalStorage();
-      })
-      .catch();
-  };
- */
-  return <div></div>;
+  return (
+    <ScreenContainer>
+      {renderedCart}
+      <h1>Total: R$ {priceToPay.toFixed(2)}</h1>
+      <button onClick={() => goToFeedPage(navigate)}>Quero mais!</button>
+      <button>Realizar pedido</button>
+    </ScreenContainer>
+  );
 };
 export default CartPage;

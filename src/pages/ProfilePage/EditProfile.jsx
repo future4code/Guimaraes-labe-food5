@@ -13,7 +13,6 @@ const EditProfile = () => {
   const [form, onChange] = useForm({ name: "", email: "", cpf: "" });
 
   const handleSubmission = (event) => {
-    console.log("deu certo")
     event.preventDefault();
     axios
       .put(`${BASE_URL}/profile`, form, {
@@ -22,11 +21,11 @@ const EditProfile = () => {
         },
       })
       .then((res) => {
-        console.log(res.data);
+        alert(`${res.data}Prontinho! Seus dados foram editados com sucesso`);
         
       })
       .catch((err) => {
-        alert(err.response.data);
+        alert(`${err.response}Edite o seu perfil`);
       });
   };
   

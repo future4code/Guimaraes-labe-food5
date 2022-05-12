@@ -37,7 +37,9 @@ export const goToSearchRestaurantPage = (navigate) => {
 export const goToFeedPage = (navigate) => {
   navigate(`/home`);
 }
-
+export const goToAdress = (navigate)=>{
+  navigate(`/cadastro-endereco`)
+}
 export const goToEditProfile = (navigate) =>{
   navigate(`/editar-perfil`)
 }

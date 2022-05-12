@@ -43,6 +43,8 @@ const Navigation = () => {
                     active={currentIcon === "profile" ? true : false}
                 />
             </div>
+
+            
         </Container>
     )
 }

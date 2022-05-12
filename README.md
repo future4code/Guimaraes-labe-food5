@@ -3,7 +3,7 @@
  
  Status do Projeto: em construção :man_technologist: - Versão Mobile
  
- Link surge: https://shiny-copy.surge.sh/
+ Link surge: https://curly-plot.surge.sh/
  
 usuário: astrodev@future4.com
 senha: 123456

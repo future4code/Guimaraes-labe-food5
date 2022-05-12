@@ -7,34 +7,39 @@ import { BASE_URL } from "../../constants/url";
 import useProtectedPage from "../../hooks/useProtectedPage";
 import Container from "../../components/MainContainer/styled";
 
+const EditAddres = () => {
+  useProtectedPage();
 
+  const [form, onChange, clear] = useForm({
+    street: "",
+    number: "",
+    neighbourhood: "",
+    city: "",
+    state: "",
+    complement: "",
+  });
 
-const EditAddres = () =>{
-  useProtectedPage()
-
-    const [form, onChange, clear] = useForm({ street: "", number: "", neighbourhood: "", city: "", state: "", complement: ""});
-
-    const handleSubmission = (event) => {  
-        event.preventDefault()  
-        axios
+  const handleSubmission = (event) => {
+    event.preventDefault();
+    axios
       .put(`${BASE_URL}/address`, form, {
         headers: {
-          auth: localStorage.getItem ("token")
+          auth: localStorage.getItem("token"),
         },
       })
       .then((res) => {
-        console.log(res.data);
-        
+        alert(`${res.data}Prontinho! Endereço editado com sucesso`);
+       
       })
       .catch((err) => {
-        alert(err.response.data);
+        alert(`${err.response}Edite o seu endereço`);
       });
-    }
-    return(
-      <Container>
-          <p>Endereço</p>
-          <form onSubmit={handleSubmission}>
-          <TextField
+  };
+  return (
+    <Container>
+      <p>Endereço</p>
+      <form onSubmit={handleSubmission}>
+        <TextField
           value={form.street}
           name="street"
           onChange={onChange}
@@ -53,7 +58,7 @@ const EditAddres = () =>{
           pattern="[.\s\w]{2,}"
           required
         />
-        
+
         <TextField
           value={form.complement}
           name="complement"
@@ -63,7 +68,7 @@ const EditAddres = () =>{
           className="Input_locus "
           required
         />
-        
+
         <TextField
           value={form.neighbourhood}
           name="neighbourhood"
@@ -91,21 +96,20 @@ const EditAddres = () =>{
           className="Input_locus"
           required
         />
-       
-        
-       <SignUpButtonContainer>
+
+        <SignUpButtonContainer>
           <Button
-          type={"submit"} 
-          fullWidth
-          variant={"contained"}
-          color={"primary"}>
+            type={"submit"}
+            fullWidth
+            variant={"contained"}
+            color={"primary"}
+          >
             SALVAR
           </Button>
         </SignUpButtonContainer>
-
-        </form>
-      </Container>
-    )
-}
+      </form>
+    </Container>
+  );
+};
 
 export default EditAddres;

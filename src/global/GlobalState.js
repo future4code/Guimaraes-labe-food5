@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import GlobalStateContext from "./GlobalStateContext";
 import axios from "axios";
 import { BASE_URL } from "../constants/url";
-import { goToFeedPage } from "../routes/coordinator";
+import { goToAdress } from "../routes/coordinator";
 const GlobalState = (props) => {
   //Organizando o código
 
@@ -44,7 +44,7 @@ const GlobalState = (props) => {
       .then((res) => {
         localStorage.setItem("token", res.data.token);
         clear();
-        goToFeedPage(navigate);
+        goToAdress(navigate);
         setLoginButtonText("Logout");
         console.log(res);
       })
@@ -56,7 +56,7 @@ const GlobalState = (props) => {
       .then((res) => {
         localStorage.setItem("token", res.data.token);
         clear();
-        goToFeedPage(navigate);
+        goToAdress(navigate);
         setLoginButtonText("Logout");
         console.log(res);
       })

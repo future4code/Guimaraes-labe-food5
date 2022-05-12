@@ -7,8 +7,10 @@ import axios from "axios";
 import { BASE_URL } from "../../constants/url";
 import GlobalStateContext from "../../global/GlobalStateContext";
 import { SignUpFormContainer, InputsContainer } from "./styledSignUp";
+import useProtectedPage from "../../hooks/useProtectedPage";
 
 const Adress = () => {
+  useProtectedPage()
   const navigate = useNavigate();
 
   const [form, onChange, clear] = useForm({

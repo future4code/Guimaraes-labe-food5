@@ -24,7 +24,7 @@ senha: 123456
 - [x] O usuário é capaz de criar conta, cadastrando dados pessoais e endereço
 - [x] Uusário recebe mensagem clara de erro
 - [x] Usuário direcionado para lista de restaurante após cadastro completo
-- [ ] 
+
 
  * Busca e Seleção de Restaurantes
 - [x]  O usuário é capaz de visualizar uma lista com todos os restaurantes

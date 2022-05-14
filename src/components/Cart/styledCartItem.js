@@ -3,9 +3,9 @@ import styled from "styled-components";
 export const ItemContainer = styled.div`
   display: flex;
   flex-direction: row;
-  height: 100px;
-  border: 2px solid black;
-  width: 400px;
+  height: 20vh;
+  border: 1px solid gray;
+  width: 90vw;
   justify-content: space-between;
   margin: 10px;
 `;

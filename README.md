@@ -34,26 +34,26 @@ senha: 123456
  * Cardápio do Restaurante
 
 - [x]  O usuário é capaz de visualizar as informações do restaurante (foto, nome, tipo, tempo de entrega, frete, endereço)
-- [ ]  O usuário deve ser capaz de visualizar os pratos do restaurante, divididos em categorias (exemplo: principais, sobremesas, entradas, etc)
-- [x]  O usuário é capaz de visualizar as informações de cada prato (foto, nome, descrição, preço)
-- [x]  O usuário deve ser capaz de adicionar pratos no carrinho 
-- [ ]  O usuário deve ser capaz de selecionar a quantidade de itens no carrinho
-- [x]  O usuário deve ser capaz de remover itens do carrinho
+- [ ]  Divisão em categorias (exemplo: principais, sobremesas, entradas, etc)
+- [x]  Informações de cada prato (foto, nome, descrição, preço)
+- [x]  Adicionar pratos no carrinho 
+- [ ]  Selecionar a quantidade de itens no carrinho
+- [x]  Remover itens do carrinho
 
  * Carrinho e Finalizar Compra
 
-- [x]  O usuário é capaz de visualizar a lista de itens que adicionou ao carrinho. Caso não tenha adicionado nenhum item, deverá ver uma mensagem de "Carrinho Vazio"
-- [ ]  O usuário deve visualizar, no topo da tela, o endereço de entrega
+- [x]  Visualizar a lista de itens que adicionou ao carrinho. Caso não tenha adicionado nenhum item, deverá ver uma mensagem de "Carrinho Vazio"
+- [ ]  OVisualizar, no topo da tela, o endereço de entrega
 - [x]  O usuário visualiza o preço total da compra, que deve ser corretamente calculado de acordo com o preço e quantidade de cada item adicionado
-- [ ]  O usuário deve ser capaz de selecionar uma forma de pagamento dentre as opções de cartão e dinheiro
-- [ ]  O usuário deve ser capaz de concluir um pedido e, ao fazê-lo, deve ver um banner de "Pedido em Andamento" com os dados do pedido (esse banner fica ativo durante X minutos, sendo X o tempo de entrega do restaurante)
+- [ ]  Selecionar uma forma de pagamento dentre as opções de cartão e dinheiro
+- [ ]  Concluir um pedido e, ao fazê-lo, deve ver um banner de "Pedido em Andamento" com os dados do pedido (esse banner fica ativo durante X minutos, sendo X o tempo de entrega do restaurante)
 
  *Perfil, Editar Perfil e Histórico de Pedidos**
 
 - [x]  O usuário é capaz de visualizar seus dados pessoais e endereço
 - [x]  O usuário é capaz de editar seus dados pessoais e endereço
-- [x]  Ao editar as informações, caso insira alguma informação incorreta ou deixe de inserir alguma informação obrigatória, o usuário receberuma mensagem clara de erro
-- [ ]  O usuário deve ser capaz de visualizar o seu histórico de pedidos concluídos (após o tempo de entrega do estabelecimento, o seu pedido aparece nessa lista?)
+- [x]  Edição de informação e mensagem de erro caso tenha campo vazio
+- [ ]  O usuário deve ser capaz de visualizar o seu histórico de pedidos concluídos 
  
  
 

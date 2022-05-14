@@ -31,7 +31,7 @@ senha: 123456
 - [x]  O usuário é capaz de buscar um restaurante por nome
 - [ ]  O usuário deve ser capaz de filtrar os restaurantes por categoria
 - [x]  O usuário é capaz de clicar no card de um restaurante para visualizar a tela com seu cardápio
-- [ ]  
+
 
  * Cardápio do Restaurante
 
@@ -41,7 +41,7 @@ senha: 123456
 - [x]  Adicionar pratos no carrinho 
 - [ ]  Selecionar a quantidade de itens no carrinho
 - [x]  Remover itens do carrinho
-- [ ]  
+
 
  * Carrinho e Finalizar Compra
 

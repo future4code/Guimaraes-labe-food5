@@ -1,3 +1,4 @@
+import { Button } from "@mui/material";
 import React from "react";
 import {
   ItemContainer,
@@ -17,10 +18,10 @@ const CartItem = (props) => {
           R$ {price} <b>x {amount}</b>
         </p>
       </TextContainer>
-      <button onClick={() => props.removeItemFromCart(props.product)}>
+      <Button onClick={() => props.removeItemFromCart(props.product)}>
         {" "}
         Remover
-      </button>
+      </Button>
     </ItemContainer>
   );
 };

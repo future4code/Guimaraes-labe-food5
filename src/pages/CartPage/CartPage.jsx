@@ -5,6 +5,7 @@ import useProtectedPage from "../../hooks/useProtectedPage";
 import { goToFeedPage } from "../../routes/coordinator";
 import CartItem from "../../components/Cart/CartItem";
 import { ScreenContainer } from "./styledCartPage";
+import { Button } from "@mui/material";
 const CartPage = (props) => {
   useProtectedPage();
   const navigate = useNavigate();
@@ -44,8 +45,8 @@ const CartPage = (props) => {
     <ScreenContainer>
       {renderedCart}
       <h1>Total: R$ {priceToPay.toFixed(2)}</h1>
-      <button onClick={() => goToFeedPage(navigate)}>Quero mais!</button>
-      <button>Realizar pedido</button>
+      <Button onClick={() => goToFeedPage(navigate)}>Quero mais!</Button>
+      <Button>Realizar pedido</Button>
     </ScreenContainer>
   );
 };

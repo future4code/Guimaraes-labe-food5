@@ -24,12 +24,14 @@ senha: 123456
 - [x] O usuário é capaz de criar conta, cadastrando dados pessoais e endereço
 - [x] Uusário recebe mensagem clara de erro
 - [x] Usuário direcionado para lista de restaurante após cadastro completo
+- [ ] 
 
  * Busca e Seleção de Restaurantes
 - [x]  O usuário é capaz de visualizar uma lista com todos os restaurantes
 - [x]  O usuário é capaz de buscar um restaurante por nome
 - [ ]  O usuário deve ser capaz de filtrar os restaurantes por categoria
 - [x]  O usuário é capaz de clicar no card de um restaurante para visualizar a tela com seu cardápio
+- [ ]  
 
  * Cardápio do Restaurante
 
@@ -39,6 +41,7 @@ senha: 123456
 - [x]  Adicionar pratos no carrinho 
 - [ ]  Selecionar a quantidade de itens no carrinho
 - [x]  Remover itens do carrinho
+- [ ]  
 
  * Carrinho e Finalizar Compra
 
@@ -46,9 +49,10 @@ senha: 123456
 - [ ]  OVisualizar, no topo da tela, o endereço de entrega
 - [x]  O usuário visualiza o preço total da compra, que deve ser corretamente calculado de acordo com o preço e quantidade de cada item adicionado
 - [ ]  Selecionar uma forma de pagamento dentre as opções de cartão e dinheiro
-- [ ]  Concluir um pedido e, ao fazê-lo, deve ver um banner de "Pedido em Andamento" com os dados do pedido (esse banner fica ativo durante X minutos, sendo X o tempo de entrega do restaurante)
+- [ ]  Concluir um pedido e, ao fazê-lo, deve ver um banner de "Pedido em Andamento"
 
- *Perfil, Editar Perfil e Histórico de Pedidos**
+
+ * Perfil, Editar Perfil e Histórico de Pedidos
 
 - [x]  O usuário é capaz de visualizar seus dados pessoais e endereço
 - [x]  O usuário é capaz de editar seus dados pessoais e endereço

@@ -61,7 +61,7 @@ senha: 123456
  
  
 
-<h3>👨‍💻 Tecnologias utilizadas</h3>
+<h3>🛠 Tecnologias utilizadas</h3>
 
 O projeto foi desenvolvido usando as seguintes tecnologias:
 

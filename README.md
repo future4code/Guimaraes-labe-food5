@@ -3,7 +3,7 @@
  
  Status do Projeto: em construção :man_technologist: - Versão Mobile
  
- Link surge: https://measly-week.surge.sh/
+ Link surge: https://fat-bait.surge.sh/
 
  ![Captura de tela 2022-05-12 152804](https://user-images.githubusercontent.com/93163329/168144187-c9c5fd5c-7331-4e10-b050-cc35c0b9fe8f.png)
 

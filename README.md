@@ -1,68 +1,65 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center" > <img width="50vw" src="https://img.icons8.com/cotton/344/street-food.png"/>
+ <h1 align="center"><strong>Labefoods</b></strong></h1></div>
+ 
+ Status do Projeto: em construção :man_technologist: - Versão Mobile
+ 
+ Link surge: https://fat-bait.surge.sh/
 
-## Available Scripts
+![Captura de tela 2022-05-12 152804](https://user-images.githubusercontent.com/93163329/168144187-c9c5fd5c-7331-4e10-b050-cc35c0b9fe8f.png)
 
-In the project directory, you can run:
+usuário: astrodev@future4.com
+senha: 123456
 
-### `npm start`
+<h3>👨‍💻👩‍💻 Desenvolvedores</h3>
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Caio Porto Ramos
+- Camila Coradi Garcia Leal
+- Laíne Reis de Moura
+- Lucas Cardoso
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+ <h3>✅ Features</h3>
+ 
+ * Login/Cadastro
+- [x] O usuário é capaz de criar conta, cadastrando dados pessoais e endereço
+- [x] Usuário recebe mensagem clara de erro
+- [x] Usuário direcionado para lista de restaurante após cadastro completo
 
-### `npm test`
+- Busca e Seleção de Restaurantes
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* [x] O usuário é capaz de visualizar uma lista com todos os restaurantes
+* [x] O usuário é capaz de buscar um restaurante por nome
+* [ ] O usuário deve ser capaz de filtrar os restaurantes por categoria
+* [x] O usuário é capaz de clicar no card de um restaurante para visualizar a tela com seu cardápio
 
-### `npm run build`
+- Cardápio do Restaurante
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* [x] O usuário é capaz de visualizar as informações do restaurante (foto, nome, tipo, tempo de entrega, frete, endereço)
+* [ ] Divisão em categorias (exemplo: principais, sobremesas, entradas, etc)
+* [x] Informações de cada prato (foto, nome, descrição, preço)
+* [x] Adicionar pratos no carrinho
+* [ ] Selecionar a quantidade de itens no carrinho
+* [x] Remover itens do carrinho
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+- Carrinho e Finalizar Compra
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* [x] Visualizar a lista de itens que adicionou ao carrinho. Caso não tenha adicionado nenhum item, deverá ver uma mensagem de "Carrinho Vazio"
+* [ ] Visualizar, no topo da tela, o endereço de entrega
+* [x] O usuário visualiza o preço total da compra, que deve ser corretamente calculado de acordo com o preço e quantidade de cada item adicionado
+* [ ] Selecionar uma forma de pagamento dentre as opções de cartão e dinheiro
+* [ ] Concluir um pedido e, ao fazê-lo, deve ver um banner de "Pedido em Andamento"
 
-### `npm run eject`
+- Perfil, Editar Perfil e Histórico de Pedidos
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+* [x] O usuário é capaz de visualizar seus dados pessoais e endereço
+* [x] O usuário é capaz de editar seus dados pessoais e endereço
+* [x] Edição de informação e mensagem de erro caso tenha campo vazio
+* [ ] O usuário deve ser capaz de visualizar o seu histórico de pedidos concluídos
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<h3>🛠 Tecnologias utilizadas</h3>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+O projeto foi desenvolvido usando as seguintes tecnologias:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- ⚛️[React](https://pt-br.reactjs.org/docs/getting-started.html)
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- 💅[Styled-Components](https://styled-components.com/docs)
+- 💎[MUI - Material UI] (https://mui.com/)
